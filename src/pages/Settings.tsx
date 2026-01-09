@@ -176,6 +176,46 @@ const Settings = () => {
 
           <Card>
             <CardHeader>
+              <CardTitle>Дополнительные функции</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <Button
+                variant="outline"
+                className="w-full justify-start"
+                onClick={() => navigate("/passwords")}
+              >
+                <Icon name="Key" size={18} className="mr-2" />
+                Менеджер паролей
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full justify-start"
+                onClick={() => navigate("/profile")}
+              >
+                <Icon name="FileText" size={18} className="mr-2" />
+                Хранилище документов
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full justify-start"
+                onClick={() => navigate("/profile")}
+              >
+                <Icon name="Crown" size={18} className="mr-2" />
+                Премиум подписка
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full justify-start"
+                onClick={() => toast.info("Напишите нам: support@browser.com")}
+              >
+                <Icon name="MessageCircle" size={18} className="mr-2" />
+                Поддержка
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Icon name="AlertTriangle" size={20} />
                 Опасная зона

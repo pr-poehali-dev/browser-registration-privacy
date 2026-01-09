@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Weather query",
+      "method": "POST",
+      "path": "/",
+      "body": "{\"query\": \"погода в москве\"}",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "response": "string",
+        "type": "weather"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Math calculation",
+      "method": "POST",
+      "path": "/",
+      "body": "{\"query\": \"сколько будет 15 плюс 25\"}",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "response": "string",
+        "type": "math"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

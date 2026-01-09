@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "VK login redirect",
+      "method": "GET",
+      "path": "/?endpoint=vk-login",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "redirect_url": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Profile unauthorized",
+      "method": "GET",
+      "path": "/?endpoint=profile",
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "Unauthorized"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

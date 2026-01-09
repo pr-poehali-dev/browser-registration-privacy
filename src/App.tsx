@@ -11,6 +11,7 @@ import Bookmarks from "./pages/Bookmarks";
 import Settings from "./pages/Settings";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import PasswordManager from "./pages/PasswordManager";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/passwords" element={<PasswordManager />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
